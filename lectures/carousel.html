@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .carousel {
+        width: 100%;
+        overflow: scroll;
+        padding: 30px;
+        position: relative;
+    }
+    .carousel__container {
+        white-space: nowrap;
+        margin: 70px 0;
+        padding-bottom: 10px;
+    }
+    .carouel-item {
+        background-color: turquoise;
+        width: 300px;
+        height:200px;
+        border-radius: 20px;
+        overflow: hidden;
+        margin-right: 10px;
+        display: inline-block;
+        cursor: pointer;
+        transition: 450ms;
+        transform-origin: center left;
+        position: relative;
+    }
+    .carouel-item:hover ~ .carouel-item {
+        transform: translate(100px, 0);
+
+    }
+    .carousel__container:hover .carouel-item {
+        opacity: 0.3;
+    }
+    .carousel__container:hover .carouel-item:hover {
+        transform: scale(1.5);
+        opacity: 1;
+    }
+    .carousel-item__img {
+        width: 300px;
+        height: 200px;
+        object-fit: cover;
+    }
+    .carousel-item__details {
+        background:linear-gradient(to top, rgba(0, 0, 0, 0.9) 0%, rgba (0, 0, 0, 0) 100%);
+        color: white;
+        font-size: 10px;
+        opacity: 0;
+        transition: 450ms opacity;
+        padding: 10px;
+        margin: 40% 40% 0 5%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        
+
+    }
+    .carousel-item__details:hover {
+        opacity: 1;
+    }
+    .carousel-item__details img {
+        
+        
+        margin: 0;
+        width: 25px;
+        height: 25px;
+        
+    }
+
+    .carousel-item__details--title {
+        
+        margin: 2px;
+    }
+    .carousel-item__details--subtitle {
+        
+        margin: 2px;
+    }
+
+
+
+</style>
+<body>
+    <section class="carousel">
+        <div class="carousel__container">
+            <div class="carouel-item">
+                <img class="carousel-item__img" src="./images/pexels-bogdan-r-anton-1088607.jpg" alt="forest-image">
+                <div class="carousel-item__details">
+                    <div>
+                        <img src="./icons/icons8-reproducir-en-círculo-64.png" alt="Play">
+                        <img src="./icons/icons8-más-64(1).png" alt="More">
+                    </div>
+                    <p class="carousel-item__details--title">Título descriptivo</p>
+                    <p class="carousel-item__details--subtitle">2019 16+ 114</p>
+                </div>
+            </div>
+            <div class="carouel-item">
+                <img class="carousel-item__img" src="./images/pexels-helena-lopes-711009.jpg" alt="forest-image">
+
+            </div>
+            <div class="carouel-item">
+                <img class="carousel-item__img" src="./images/pexels-matheus-guimarães-611328.jpg" alt="forest-image">
+
+            </div>
+            <div class="carouel-item">
+                <img class="carousel-item__img" src="./images/pexels-pixabay-274053.jpg" alt="forest-image">
+
+            </div>
+            <div class="carouel-item">
+                <img class="carousel-item__img" src="./images/pexels-una-laurencic-20967.jpg" alt="forest-image">
+
+            </div>
+        </div>
+    </section>
+</body>
+</html>
